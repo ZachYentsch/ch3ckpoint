@@ -16,10 +16,12 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
-      <a class="navbar-brand ms-3" href="#">
+    <nav class="navbar navbar-dark navbar-expand bg-dark text-light d-flex justify-content-around">
+      <a class="navbar-brand ms-3 no-select" href="#">
         <span class="ms-2">Today's Agenda</span>
       </a>
+      <button class="btn btn-primary selectable text-light" data-bs-target="#listModal" data-bs-toggle="modal"
+        onclick="app.listsController.drawListForm()">Create List</button>
     </nav>
   </header>
 
