@@ -10,7 +10,7 @@ function _drawList() {
     document.getElementById('list').innerHTML = template
 }
 function _drawListForm() {
-    document.getElementById('modal-body').innerHTML = listForm
+    document.getElementById('modal-body-slot').innerHTML = listForm
 }
 
 export class ListController {

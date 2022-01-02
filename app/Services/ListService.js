@@ -2,9 +2,9 @@ import { ProxyState } from "../AppState";
 import { List } from "../Models/List";
 // saveState
 // taskService
-
 // List
 // ProxyState
+
 class ListsService {
     constructor() {
         ProxyState.on('list', saveState)
