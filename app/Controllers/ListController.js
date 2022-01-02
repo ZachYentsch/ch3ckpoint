@@ -3,14 +3,14 @@ import { ProxyState } from "../AppState"
 import { listForm } from "../Componets/ListForm"
 import { listsService } from "../Services/ListService"
 
-
+Modal
 function _drawList() {
     let template = ''
     ProxyState.lists.forEach(l => template += l.template)
     document.getElementById('list').innerHTML = template
 }
 function _drawListForm() {
-    document.getElementById('modal-body-slot').innerHTML = listForm
+    document.getElementById('modal-body').innerHTML = listForm
 }
 
 export class ListController {

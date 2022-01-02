@@ -1,5 +1,6 @@
+import { ProxyState } from "../AppState"
 import { generateId } from "../Utils/generateId"
-
+ProxyState
 
 export class List {
   constructor(data) {
@@ -36,5 +37,8 @@ export class List {
           </div>
         </div>
         `
+  }
+  get Tasks() {
+    let template = ''
   }
 }
