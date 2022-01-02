@@ -1,16 +1,16 @@
-import { Modal } from "bootstrap"
-import { ProxyState } from "../AppState"
-import { listForm } from "../Componets/ListForm"
-import { listsService } from "../Services/ListService"
+import { ProxyState } from "../AppState.js";
+import { listForm } from "../Componets/ListForm.js";
+import { listsService } from "../Services/ListService.js";
+import { loadState } from "../Utils/LocalStorage.js";
 
-Modal
+// Modal
 function _drawList() {
     let template = ''
-    ProxyState.lists.forEach(l => template += l.template)
+    ProxyState.lists.forEach(l => template += l.Template)
     document.getElementById('list').innerHTML = template
 }
 function _drawListForm() {
-    document.getElementById('modal-body-slot').innerHTML = listForm
+    document.getElementById('modal-body-slot').innerHTML = listForm()
 }
 
 export class ListController {
@@ -27,13 +27,15 @@ export class ListController {
             name: form.name.value,
             finishBy: form.finishBy.value
         }
+        console.log('new list', newList)
         listsService.createList(newList)
 
-        form.removeEventListener()
+        form.reset()
         bootstrap.Modal.getOrCreateInstance(document.getElementById('listModal')).toggle()
     }
 
     deleteList(listId) {
+        console.log('list id', listId)
         listsService.deleteList(listId)
     }
 

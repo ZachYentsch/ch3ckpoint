@@ -1,6 +1,6 @@
-import { ProxyState } from "../AppState";
-import { List } from "../Models/List";
-import { Task } from "../Models/Tasks";
+import { ProxyState } from "../AppState.js";
+import { List } from "../Models/List.js";
+import { Task } from "../Models/Tasks.js";
 // Task
 // List
 // ProxyState

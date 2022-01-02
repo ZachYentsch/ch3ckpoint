@@ -1,6 +1,6 @@
-import { ProxyState } from "../AppState"
-import { generateId } from "../Utils/generateId"
-ProxyState
+import { ProxyState } from "../AppState.js"
+import { generateId } from "../Utils/generateId.js"
+
 
 export class List {
   constructor(data) {
