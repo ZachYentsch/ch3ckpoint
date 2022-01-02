@@ -1,9 +1,8 @@
-import { Modal } from "bootstrap";
-import { ProxyState } from "../AppState";
-import { listsService } from "../Services/ListService";
+import { Modal } from "bootstrap"
+import { ProxyState } from "../AppState"
+import { listForm } from "../Componets/ListForm"
+import { listsService } from "../Services/ListService"
 
-// listsService
-// ProxyState
 
 function _drawList() {
     let template = ''
@@ -38,7 +37,7 @@ export class ListController {
         listsService.deleteList(listId)
     }
 
-    _drawListForm() {
+    drawListForm() {
         _drawListForm()
     }
 }
