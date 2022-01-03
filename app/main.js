@@ -4,7 +4,7 @@ import { loadState } from "./Utils/LocalStorage.js";
 // ListController
 
 class App {
-  ListController = new ListController();
+  listsController = new ListController();
 }
 
 loadState()

@@ -40,8 +40,8 @@ export class List {
   }
   get Tasks() {
     let template = ''
-    let foundTask = ProxyState.Tasks.filter(t => t.listId == this.id)
-    foundTask.forEach(t => template += t.Template)
+    let foundTasks = ProxyState.Tasks.filter(t => t.listId == this.id)
+    foundTasks.forEach(t => template += t.Template)
     return template
   }
 }

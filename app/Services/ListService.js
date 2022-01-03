@@ -4,12 +4,14 @@ import { saveState } from "../Utils/LocalStorage.js";
 
 
 class ListsService {
+
     constructor() {
         ProxyState.on('list', saveState)
     }
 
     createList(newList) {
         ProxyState.lists = [new List(newList), ...ProxyState.lists]
+        console.log('list Proxy', ProxyState.lists)
     }
 
     deleteList(listId) {

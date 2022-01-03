@@ -2,7 +2,7 @@
 
 export function listForm() {
   return `
-    <form onsubmit="app.ListController.createList()">
+    <form onsubmit="app.listsController.createList()">
     <div class="form-group">
       <input type="text" name="Title" class="form-control" placeholder="Title..." minlength="3"
         maxlength="15" required>
