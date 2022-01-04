@@ -3,10 +3,11 @@ import { List } from "../Models/List.js";
 import { saveState } from "../Utils/LocalStorage.js";
 
 
+
 class ListsService {
 
     constructor() {
-        ProxyState.on('list', saveState)
+        ProxyState.on('lists', saveState)
     }
 
     createList(newList) {

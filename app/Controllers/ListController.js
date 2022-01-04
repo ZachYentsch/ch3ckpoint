@@ -7,7 +7,7 @@ import { loadState } from "../Utils/LocalStorage.js";
 function _drawList() {
     let template = ''
     ProxyState.lists.forEach(l => template += l.Template)
-    document.getElementById('list').innerHTML = template
+    document.getElementById('lists').innerHTML = template
 }
 function _drawListForm() {
     document.getElementById('modal-body-slot').innerHTML = listForm()
@@ -24,8 +24,7 @@ export class ListController {
         window.event.preventDefault()
         let form = window.event.target
         const newList = {
-            name: form.name.value,
-            finishBy: form.finishBy.value
+            name: form.name.value
         }
         console.log('new list', newList)
         listsService.createList(newList)

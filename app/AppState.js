@@ -1,12 +1,17 @@
 import { List } from "./Models/List.js"
+import { Task } from "./Models/Tasks.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
   lists = [
-    new List({ name: 'Feed dog', finish: 'Tonight' }),
-    new List({ name: 'House Sitting', finish: 'Friday' }),
-    new List({ name: 'Grocery List', finish: 'Tomorrow' })
+    new List({ name: 'Feed dog' }),
+    new List({ name: 'House Sitting' }),
+    new List({ name: 'Grocery List' })
+  ]
+
+  tasks = [
+    new Task({ title: '2 scoops dog food' })
   ]
 }
 

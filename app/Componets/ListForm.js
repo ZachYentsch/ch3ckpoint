@@ -1,5 +1,3 @@
-
-
 export function listForm() {
   return `
     <form onsubmit="app.listsController.createList()">
