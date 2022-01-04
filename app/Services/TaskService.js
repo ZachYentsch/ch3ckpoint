@@ -1,9 +1,8 @@
 import { ProxyState } from "../AppState.js";
 import { Task } from "../Models/Tasks.js";
 import { saveState } from "../Utils/LocalStorage.js";
-// saveState
-// Task
-class TaskService {
+
+class TasksService {
 
     constructor() {
         ProxyState.on('tasks', saveState)
@@ -19,4 +18,4 @@ class TaskService {
     }
 }
 
-export const taskService = new TaskService()
+export const taskService = new TasksService()

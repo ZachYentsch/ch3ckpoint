@@ -3,7 +3,6 @@ import { listForm } from "../Componets/ListForm.js";
 import { listsService } from "../Services/ListService.js";
 import { loadState } from "../Utils/LocalStorage.js";
 
-// Modal
 function _drawList() {
     let template = ''
     ProxyState.lists.forEach(l => template += l.Template)
@@ -24,7 +23,8 @@ export class ListController {
         window.event.preventDefault()
         let form = window.event.target
         const newList = {
-            name: form.name.value
+            name: form.name.value,
+            color: form.color.value
         }
         console.log('new list', newList)
         listsService.createList(newList)
